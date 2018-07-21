@@ -1,0 +1,68 @@
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+section {
+  background-color: #808080;
+  margin-bottom: 30px;
+}
+
+.flex {
+  display: flex;
+  height: 300px;
+  width: 100%;
+}
+
+p {
+  width: 50%;
+}
+
+.ac-flex-start {
+  align-items: flex-start;
+}
+
+.ac-flex-end {
+  align-items: flex-end;
+}
+
+.ac-center {
+  align-items: center;
+}
+
+.ac-sb {
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+.ac-sa {
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+
+.ac-stretch {
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.ai-fs {
+  align-items: flex-start;
+}
+
+.ai-fe {
+  align-items: flex-end;
+}
+
+.ai-c {
+  align-items: center;
+}
+
+.ai-b {
+  align-items: baseline;
+}
+
+.ai-s {
+  align-items: stretch;
+}
+
+/*# sourceMappingURL=style.css.map */
