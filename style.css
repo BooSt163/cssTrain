@@ -143,4 +143,73 @@ p {
   box-shadow: 0 10px 5px #fff;
 }
 
+#sect-19 caption {
+  caption-side: bottom;
+}
+
+#sect-20 div {
+  column-gap: 20px;
+  column-fill: auto;
+  column-rule: 2px solid #fff;
+  column-width: 30px;
+}
+
+#sect-21 li {
+  list-style-type: none;
+}
+#sect-21 li::before {
+  content: counter(list1) ". ";
+  counter-increment: list1;
+}
+#sect-21 ol {
+  counter-reset: list1;
+}
+#sect-21 ol ol {
+  counter-reset: list2;
+}
+#sect-21 ol ol li::before {
+  content: counter(list1) ". " counter(list2) ".";
+  counter-increment: list2;
+}
+
+#sect-22 p {
+  cursor: help;
+}
+
+#sect-23 {
+  direction: rtl;
+}
+
+#sect-24 img {
+  width: 500px;
+  height: auto;
+  filter: grayscale(100%);
+}
+
+#sect-25 p {
+  margin-right: 10px;
+}
+#sect-25 .flex {
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+#sect-25 .flex .first {
+  flex-basis: 100%;
+  order: 1;
+  background: #000;
+}
+#sect-25 .flex .second {
+  order: 2;
+  flex: 2 1 0;
+  background: red;
+  font: bold italic 20px sans-serif;
+}
+#sect-25 .flex .third {
+  order: 3;
+  background: red;
+  flex: 1 1 0;
+  font-variant: small-caps;
+}
+
 /*# sourceMappingURL=style.css.map */
