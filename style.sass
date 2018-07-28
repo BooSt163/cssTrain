@@ -1,4 +1,5 @@
 @import vars.sass
+charset UTF-8
 
 body
   background-color: #000
@@ -100,6 +101,8 @@ p
 #sect-19
   caption
     caption-side: bottom
+  td
+    vertical-align: sub
 #sect-20
   div
     column-gap: 20px
@@ -197,3 +200,45 @@ p
     &:hover
       transform: rotateZ(360deg)
       transition: 5s
+#sect-34
+  p
+    direction: rtl
+    unicode-bidi: bidi-override
+    user-select: none
+    white-space: wrap
+    word-break: break-all
+    word-spacing: 10px
+    writing-mode: vertical-lr
+*
+  color: $d
+#sect-35
+  a
+    &:active
+      color: #ff0000
+#sect-36
+  input
+    &:checked + p
+      background: red
+#sect-37
+  textarea
+    &:disabled
+      background-color: red
+#sect-38
+  li
+    &:first-child
+      color: $l
+#sect-39
+  input
+    &:focus
+      background-color: yellow
+  &:focus-within
+    background-color: $l
+#sect-40
+  input
+    &:in-range
+      background-color: #00ff00
+    &:out-of-range
+      background-color: #ff0000
+@media only screen and (max-width : 768px)
+  p
+    width: 100%
