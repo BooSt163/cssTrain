@@ -243,22 +243,21 @@ p
   display: flex
   justify-content: center
   .cont-fluid
-    width: 1200px
+    width: 800px
     display: flex
-    flex-direction: column
     .viewport
-      width: 400px
+      width: 100%
       overflow: hidden
       transition: 0.5s
       position: relative
       .slide-line
         display: flex
-        width: 1800px
+        width: calc(100%*3)
         transition: 0.5s
-        overflow-y: hidden
         height: 400px
+        margin: auto
         .slide-item
-          width: 400px
+          width: calc(100%/3)
           height: auto
           img
             width: 100%

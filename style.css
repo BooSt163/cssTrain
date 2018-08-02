@@ -325,25 +325,24 @@ p {
   justify-content: center;
 }
 #slider .cont-fluid {
-  width: 1200px;
+  width: 800px;
   display: flex;
-  flex-direction: column;
 }
 #slider .cont-fluid .viewport {
-  width: 400px;
+  width: 100%;
   overflow: hidden;
   transition: 0.5s;
   position: relative;
 }
 #slider .cont-fluid .viewport .slide-line {
   display: flex;
-  width: 1800px;
+  width: calc(100%*3);
   transition: 0.5s;
-  overflow-y: hidden;
   height: 400px;
+  margin: auto;
 }
 #slider .cont-fluid .viewport .slide-line .slide-item {
-  width: 400px;
+  width: calc(100%/3);
   height: auto;
 }
 #slider .cont-fluid .viewport .slide-line .slide-item img {
