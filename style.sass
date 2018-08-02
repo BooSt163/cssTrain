@@ -239,6 +239,61 @@ p
       background-color: #00ff00
     &:out-of-range
       background-color: #ff0000
+#slider
+  display: flex
+  justify-content: center
+  .cont-fluid
+    width: 1200px
+    display: flex
+    flex-direction: column
+    .viewport
+      width: 400px
+      overflow: hidden
+      transition: 0.5s
+      position: relative
+      .slide-line
+        display: flex
+        width: 1800px
+        transition: 0.5s
+        overflow-y: hidden
+        height: 400px
+        .slide-item
+          width: 400px
+          height: auto
+          img
+            width: 100%
+            height: auto
+  .control
+    cursor: pointer
+    position: absolute
+    top: 0
+    margin: auto
+    z-index: 300
+    transition: 0.5s
+    .next
+      height: 20px
+      width: 20px
+      position: relative
+      &::before, &::after
+        content: ''
+        width: 20px
+        position: absolute
+        height: 20px
+        border-top: 2px solid $d
+        border-right: 2px solid $d
+        transform: rotate(45deg)
+    .prev
+      height: 20px
+      width: 20px
+      position: relative
+      &::before, &::after
+        content: ''
+        width: 20px
+        position: absolute
+        height: 20px
+        border-top: 2px solid $d
+        border-right: 2px solid $d
+        transform: rotate(-135deg)
 @media only screen and (max-width : 768px)
   p
     width: 100%

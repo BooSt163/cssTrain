@@ -320,6 +320,73 @@ p {
   background-color: #ff0000;
 }
 
+#slider {
+  display: flex;
+  justify-content: center;
+}
+#slider .cont-fluid {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+#slider .cont-fluid .viewport {
+  width: 400px;
+  overflow: hidden;
+  transition: 0.5s;
+  position: relative;
+}
+#slider .cont-fluid .viewport .slide-line {
+  display: flex;
+  width: 1800px;
+  transition: 0.5s;
+  overflow-y: hidden;
+  height: 400px;
+}
+#slider .cont-fluid .viewport .slide-line .slide-item {
+  width: 400px;
+  height: auto;
+}
+#slider .cont-fluid .viewport .slide-line .slide-item img {
+  width: 100%;
+  height: auto;
+}
+#slider .control {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  margin: auto;
+  z-index: 300;
+  transition: 0.5s;
+}
+#slider .control .next {
+  height: 20px;
+  width: 20px;
+  position: relative;
+}
+#slider .control .next::before, #slider .control .next::after {
+  content: "";
+  width: 20px;
+  position: absolute;
+  height: 20px;
+  border-top: 2px solid #000;
+  border-right: 2px solid #000;
+  transform: rotate(45deg);
+}
+#slider .control .prev {
+  height: 20px;
+  width: 20px;
+  position: relative;
+}
+#slider .control .prev::before, #slider .control .prev::after {
+  content: "";
+  width: 20px;
+  position: absolute;
+  height: 20px;
+  border-top: 2px solid #000;
+  border-right: 2px solid #000;
+  transform: rotate(-135deg);
+}
+
 @media only screen and (max-width: 768px) {
   p {
     width: 100%;
