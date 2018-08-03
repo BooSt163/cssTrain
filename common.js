@@ -16,7 +16,8 @@ $(document).ready(function() {
 
 
     for (var i = 1; i <= slideCount; i++) { //метод, который берет порядковый номер слайда, и выводит заголовок - ссылку на него (еще нет)
-    	$('.tabsList').append('<li>Test Tab</li>')
+    	$('.tabsList').append('<li><a href="">Test Tab</a></li>')
+      $('.tabsList a').attr('href', tabCount)
     }
 
 });
