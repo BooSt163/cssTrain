@@ -1,6 +1,6 @@
 var slideCount = $('.slide-line').children().length; //счетчик количества слайдов
 var slideNow = 1;
-var tabCount = Array.from({ length: slideCount }, (v, k) => k); // порядковые номера слайдов
+var slidePos = Array.from({ length: slideCount }, (v, k) => k); // порядковые номера слайдов
 
 
 $(document).ready(function() {
@@ -12,13 +12,23 @@ $(document).ready(function() {
     prevSlide();
   });
 
-  console.log(tabCount);
-
 
     for (var i = 1; i <= slideCount; i++) { //метод, который берет порядковый номер слайда, и выводит заголовок - ссылку на него (еще нет)
-    	$('.tabsList').append('<li><a href="">Test Tab</a></li>')
-      $('.tabsList a').attr('href', tabCount)
-    }
+    	$('.tabsList').append('<li>Test</li>')
+    };
+
+var tabCount = $('.tabsList').children().length; //до цикла не существует поэтому объявлено тут
+var tabPos = Array.from({ length: tabCount }, (v, k) => k); //порядковые номера табов
+
+$('.tabsList').on('click', 'li', function () { //определяем порядковый номер таба  на который кликнули
+    var n=$('.tabsList li').index(this);
+    console.log(n);
+});
+
+
+// $(this).click(function(){
+//   chooseTab();
+// });
 
 });
 
@@ -44,3 +54,11 @@ function prevSlide() {
     }
     slideNow--;
 };
+
+
+// function chooseTab() {  //функция, которая будет сравнивать порядковый номер таба и слайда и крутить пока не совпадет
+//   while(n != slideNow ){
+//     slideWidth = -$('.viewport').width() * (slideNow);
+//     $('.slide-line').css('transform', 'translate('+ slideWidth +'px, 0)');
+//   }
+// }
