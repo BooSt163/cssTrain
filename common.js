@@ -1,6 +1,5 @@
 var slideCount = $('.slide-line').children().length; //счетчик количества слайдов
 var slideNow = 1;
-var slidePos = Array.from({ length: slideCount }, (v, k) => k); // порядковые номера слайдов
 
 
 $(document).ready(function() {
@@ -13,23 +12,35 @@ $(document).ready(function() {
   });
 
 
-    for (var i = 1; i <= slideCount; i++) { //метод, который берет порядковый номер слайда, и выводит заголовок - ссылку на него (еще нет)
-    	$('.tabsList').append('<li>Test</li>')
-    };
+  for (var i = 1; i <= slideCount; i++) { //метод, который берет порядковый номер слайда, и выводит заголовок - ссылку на него (еще нет)
+  	$('.tabsList').append('<li>Test</li>')
+  };
 
 var tabCount = $('.tabsList').children().length; //до цикла не существует поэтому объявлено тут
-var tabPos = Array.from({ length: tabCount }, (v, k) => k); //порядковые номера табов
+var number;
 
-$('.tabsList').on('click', 'li', function () { //определяем порядковый номер таба  на который кликнули
-    var n=$('.tabsList li').index(this);
-    console.log(n);
+
+$('.tabsList li').each(function () { //определяем порядковый номер таба
+    var number=$('.tabsList li').index(this);
+    console.log('Номер таба:' + number);
 });
 
 
 // $(this).click(function(){
 //   chooseTab();
+//   console.log(number);
 // });
 
+
+});
+
+$(document).ready(function(){ //присваивание id div со слайдами
+
+    var i=0;
+    $('.slide-line div').each(function(){
+      i++;
+      $(this).attr('id',i);
+    });
 });
 
 function nextSlide() {
@@ -56,8 +67,9 @@ function prevSlide() {
 };
 
 
-// function chooseTab() {  //функция, которая будет сравнивать порядковый номер таба и слайда и крутить пока не совпадет
-//   while(n != slideNow ){
+// function chooseTab(getNumber) {  //функция, которая будет сравнивать порядковый номер таба и слайда и крутить пока не совпадет
+//       var number = getNumber; //пока вечный цикл
+//       while(number + 1 != $('.slide-line div').attr('id') ){
 //     slideWidth = -$('.viewport').width() * (slideNow);
 //     $('.slide-line').css('transform', 'translate('+ slideWidth +'px, 0)');
 //   }
