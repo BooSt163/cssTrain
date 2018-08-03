@@ -1,6 +1,6 @@
-var slideCount = $('.slide-line').children().length;
+var slideCount = $('.slide-line').children().length; //счетчик количества слайдов
 var slideNow = 1;
-
+var tabCount = Array.from({ length: slideCount }, (v, k) => k); // порядковые номера слайдов
 
 
 $(document).ready(function() {
@@ -11,6 +11,14 @@ $(document).ready(function() {
   $('.prev').click(function(){
     prevSlide();
   });
+
+  console.log(tabCount);
+
+
+    for (var i = 1; i <= slideCount; i++) { //метод, который берет порядковый номер слайда, и выводит заголовок - ссылку на него (еще нет)
+    	$('.tabsList').append('<li>Test Tab</li>')
+    }
+
 });
 
 function nextSlide() {
