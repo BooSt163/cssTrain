@@ -1,5 +1,6 @@
 var slideCount = $('.slide-line').children().length; //счетчик количества слайдов
 var slideNow = 1;
+var tabId = 0;
 
 
 $(document).ready(function() {
@@ -11,36 +12,24 @@ $(document).ready(function() {
     prevSlide();
   });
 
-
   for (var i = 1; i <= slideCount; i++) { //метод, который берет порядковый номер слайда, и выводит заголовок - ссылку на него (еще нет)
-  	$('.tabsList').append('<li>Test</li>')
+    $('.tabsList').append('<li class="tabItem"></li>');
+  };
+  for( var i = 0; i <= slideCount; i++){
+    slideTitle = $('.slide-item .title').text();
+    $('.tabItem').text(slideTitle);
   };
 
-var tabCount = $('.tabsList').children().length; //до цикла не существует поэтому объявлено тут
-var number;
+  $('.tabItem').click(function(){ //Навигация по табам
+    tabId = $(this).index();
 
+    if (tabId + 1 != slideNow){
+      slideWidth = -$('.viewport').width() * (tabId);
+      $('.slide-line').css('transform', 'translate('+ slideWidth +'px, 0)');
+      slideNow = tabId + 1;
+    }
+  });
 
-$('.tabsList li').each(function () { //определяем порядковый номер таба
-    var number=$('.tabsList li').index(this);
-    console.log('Номер таба:' + number);
-});
-
-
-// $(this).click(function(){
-//   chooseTab();
-//   console.log(number);
-// });
-
-
-});
-
-$(document).ready(function(){ //присваивание id div со слайдами
-
-    var i=0;
-    $('.slide-line div').each(function(){
-      i++;
-      $(this).attr('id',i);
-    });
 });
 
 function nextSlide() {
@@ -65,12 +54,3 @@ function prevSlide() {
     }
     slideNow--;
 };
-
-
-// function chooseTab(getNumber) {  //функция, которая будет сравнивать порядковый номер таба и слайда и крутить пока не совпадет
-//       var number = getNumber; //пока вечный цикл
-//       while(number + 1 != $('.slide-line div').attr('id') ){
-//     slideWidth = -$('.viewport').width() * (slideNow);
-//     $('.slide-line').css('transform', 'translate('+ slideWidth +'px, 0)');
-//   }
-// }
