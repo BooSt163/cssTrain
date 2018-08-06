@@ -1,3 +1,7 @@
+(function () {
+  
+
+}());
 var slideCount = $('.slide-line').children().length; //счетчик количества слайдов
 var slideNow = 1;
 var tabId = 0;
@@ -5,14 +9,16 @@ var tabId = 0;
 
 $(document).ready(function() {
 
+
   $('.arrow').click(function(){
     var ths = $(this);
     nav(ths);
   })
 
-  for (var i = 1; i <= slideCount; i++) { //метод, который берет порядковый номер слайда, и выводит заголовок - ссылку на него (еще нет)
+  for (var i = 1; i <= slideCount; i++) { //метод, который берет порядковый номер слайда, и выводит заголовок - ссылку на него
     $('.tabsList').append('<li class="tabItem"></li>');
   };
+
   for(var i = 0; i <= slideCount; i++){
     slideTitle = $($('.slide-item .title')[i]).text();
     $($('.tabItem')[i]).text(slideTitle);
