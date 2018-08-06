@@ -1,7 +1,3 @@
-(function () {
-  
-
-}());
 var slideCount = $('.slide-line').children().length; //счетчик количества слайдов
 var slideNow = 1;
 var tabId = 0;
