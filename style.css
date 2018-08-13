@@ -320,36 +320,36 @@ p {
   background-color: #ff0000;
 }
 
-#slider {
+.slider {
   display: flex;
   justify-content: center;
 }
-#slider .cont-fluid {
+.slider .cont-fluid {
   width: 800px;
   display: flex;
 }
-#slider .cont-fluid .viewport {
+.slider .cont-fluid .viewport {
   width: 100%;
   overflow: hidden;
   transition: 0.5s;
   position: relative;
 }
-#slider .cont-fluid .viewport .slide-line {
+.slider .cont-fluid .viewport .slide-line {
   display: flex;
   width: calc(100%*3);
   transition: 0.5s;
   height: 400px;
   margin: auto;
 }
-#slider .cont-fluid .viewport .slide-line .slide-item {
+.slider .cont-fluid .viewport .slide-line .slide-item {
   width: calc(100%/3);
   height: auto;
 }
-#slider .cont-fluid .viewport .slide-line .slide-item img {
+.slider .cont-fluid .viewport .slide-line .slide-item img {
   width: 100%;
   height: auto;
 }
-#slider .control {
+.slider .control {
   cursor: pointer;
   position: absolute;
   top: 0;
@@ -357,12 +357,12 @@ p {
   z-index: 300;
   transition: 0.5s;
 }
-#slider .control .next {
+.slider .control .next {
   height: 20px;
   width: 20px;
   position: relative;
 }
-#slider .control .next::before, #slider .control .next::after {
+.slider .control .next::before, .slider .control .next::after {
   content: "";
   width: 20px;
   position: absolute;
@@ -371,12 +371,12 @@ p {
   border-right: 2px solid #000;
   transform: rotate(45deg);
 }
-#slider .control .prev {
+.slider .control .prev {
   height: 20px;
   width: 20px;
   position: relative;
 }
-#slider .control .prev::before, #slider .control .prev::after {
+.slider .control .prev::before, .slider .control .prev::after {
   content: "";
   width: 20px;
   position: absolute;
@@ -385,7 +385,7 @@ p {
   border-right: 2px solid #000;
   transform: rotate(-135deg);
 }
-#slider .tabs {
+.slider .tabs {
   width: 300px;
   height: 100%;
   background: #fff;
