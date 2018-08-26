@@ -1,3 +1,15 @@
+.item-1 {
+  font-size: 20px;
+}
+
+.item-2 {
+  font-size: 40px;
+}
+
+.item-3 {
+  font-size: 60px;
+}
+
 body {
   background-color: #000;
   color: #fff;
@@ -389,6 +401,12 @@ p {
   width: 300px;
   height: 100%;
   background: #fff;
+}
+
+.mixin {
+  font-size: 60px;
+  color: #red;
+  font-weight: 600;
 }
 
 @media only screen and (max-width: 768px) {
